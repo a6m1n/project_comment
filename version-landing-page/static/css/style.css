@@ -1,0 +1,66 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+header {
+	margin: 10px 5% 10px;
+	height: 100px;
+	width: 90%;
+	background-color: rgba(89, 89, 202, 0.17);
+}
+#fbButtonLogin {
+	float: right;
+	padding: 10px;
+}
+#if_true {
+	text-align: center;
+}
+#id_user {
+	display: none;
+}
+#if_true div {
+    position: relative;
+	float: right;
+	top: 10px;
+    right: 10px;
+}
+#if_true div a{
+	text-decoration: none;
+}
+#name_user, #if_true p {
+	padding-top: 20px;
+	/*background-color: #fff;*/
+	/*display: inline;*/
+	font-size: 1.2em;
+}
+.create_new_post {
+	margin: 40px 10% 0;
+	min-height: 400px;
+	width: 80%;
+	background-color: rgba(0, 30, 84, .296875);
+}
+.label_field_cnp {
+	top: 10px;
+	left: 30px;
+	width: 60%;
+	position: relative;
+	background-color: rgba(0, 30, 84, .296875);;
+	font-size: 1.7em;
+}
+.form_for_new_p {
+	position: relative;
+	top: 40px;
+}
+.text_area_for_new_post{
+	font-size: 1.3em;
+	width: 60%;
+	resize: none;
+	height: 200px;
+	left: 30px;
+	position: relative
+}
+.button_post {
+	position: relative;
+	margin-left: 40px;
+}
+}
