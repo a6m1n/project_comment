@@ -40,87 +40,97 @@
 		<div class='name_posts'>all posts</div>
 		{% for post in posts%}
 			<div class="startBlock">
-				<span class='text_in_db'>
-					{{ post.text }}
-				</span>
-				
-				<br>
-
-				<span class='date_in_db'>
-					{{ post.date.strftime('%d.%m.%Y, %H:%M' ) }}
-				</span>
-
-				<span class='id_in_db' style='display: None'>
-					{{ post.id }}
-				</span>
-
-				
-				<form action="">
+				<div class="wrapperPost">
+					
+					<span> Text: </span>
+					<span class='text_in_db'>
+						{{ post.text }}
+					</span>
+					
 					<br>
-					<input type="button" value='Редактировать' onclick="editPost(this)" class='editSomePost' >
-					<button type="button" onclick="test2(this)" class='delete'>Удалить</button>
-					<button type="button" onclick="showComments(this)" class='commentButton'>Коментарии</button>
-					{% for field in form%}
-						{{ field(style='display:None',  class='editSomeText') }}
-					{%endfor%}
-					<br>
-				</form>
+					<span>Date: </span>
+					<span class='date_in_db'>
+						{{ post.date.strftime('%d.%m.%Y, %H:%M' ) }}
+					</span>
 
-					<span class='spancomments' style="display: none">
-						{% for com in post.comments %}
-						<form action="" class='hideForm'>
+					<span class='id_in_db' style='display: None'>
+						{{ post.id }}
+					</span>
 
-							<span class='textComments'>
-								{{ com.text }}
-							</span>
-							<br> 
-							{{ com.date.strftime('%d.%m.%Y, %H:%M') }}
-							<!-- <br> -->
-							<span class='idCommentLL' style="display: none"> 
-								{{ com.id }}
-							</span>
-							<br>
-							<input type="button" value='Редактировать коментарий' class='editComentLL' onclick='edit_post_comment(this)' >
-							<button type="button" onclick='delete_comment_l1(this)' class='deleteCommentLL' >Удалить коментарий</button>
-							<button type="button" onclick='showComentsLW(this)' class='commentLW'>Коментарии коментария</button>
-							<br>
-							<textarea name="" id="" cols="20" rows="5" style="display: none" class='textAreaEditLL'></textarea>
-							<span style='color: red; display: none' class =' levelLW'>
-								{%for co in com.Second_comments %}
-									<span class='blockAllLW'>
-										<span class='blockLW'>
-											{{co.text}}
-										</span>
-										<br>
-										<span>
-											{{co.date.strftime('%d.%m.%Y, %H:%M')}}
-										</span>
-										<br>
-										<span style='display: none; ' class='id_in_db_LW'>
-											{{co.id}}
-										</span>
-										<input type="button" value='Редактировать коментарий'  onclick='edit_lw(this)' class='editComLW' >
-										<button type="button" onclick='del_lw(this)' class='buttonDeleteLW'  >Удалить коментарий</button>
-										<br>
-										<textarea name="" id="" cols="20" rows="5" style="display: none" class='textAreaLW'  ></textarea>								
-										<br>
-									</span>
-								{%endfor%}
-								<form action="" method="POST">
-									<input type="text" placeholder="Введите коментарий второго уровня" class='inputLW'>
-									<button type="submit" onclick='add_comment_LW2(this)' class='comment_LW' >коментировать</button>
-								</form>
-							</span>
-								
-						</form>
-
+					
+					<form class='ButtonLone'>
+						<br>
+						<input type="button" value='Редактировать' onclick="editPost(this)" class='editSomePost' >
+						<button type="button" onclick="test2(this)" class='delete'>Удалить</button>
+						<button type="button" onclick="showComments(this)" class='commentButton'>Коментарии</button>
+						{% for field in form%}
+							{{ field(style='display:None',  class='editSomeText') }}
 						{%endfor%}
-					<br><br>
-					<form action="" method="POST">
-						<input type="text" placeholder="Введите коментарий" class='InputComment' name='InputComment0'>
-						<button type="submit" onclick='add_comment(this)' class='addcommentButton'>коментировать</button>
+						<br>
 					</form>
-				<br><br>
+
+						<span class='spancomments' style="display: none">
+							{% for com in post.comments %}
+							<div action="" class='hideForm'>
+								<span>Comment: </span>
+								<span class='textComments'>
+									{{ com.text }}
+								</span>
+								<br>
+								<span> Comment date: </span> 
+								{{ com.date.strftime('%d.%m.%Y, %H:%M') }}
+								<!-- <br> -->
+								<span class='idCommentLL' style="display: none"> 
+									{{ com.id }}
+								</span>
+								<br>
+								<input type="button" value='Редактировать коментарий' class='editComentLL' onclick='edit_post_comment(this)' >
+								<button type="button" onclick='delete_comment_l1(this)' class='deleteCommentLL' >Удалить коментарий</button>
+								<button type="button" onclick='showComentsLW(this)' class='commentLW'>Коментарии коментария</button>
+								<br>
+								<textarea name="" id="" cols="20" rows="5" style="display: none" class='textAreaEditLL'></textarea>
+								<span style='color: red; display: none' class =' levelLW'>
+									{%for co in com.Second_comments %}
+										<span class='blockAllLW'>
+											<span>Comment: </span>
+
+											<span class='blockLW'>
+												{{co.text}}
+											</span>
+											<br>
+											<span>Date: </span>
+
+											<span>
+												{{co.date.strftime('%d.%m.%Y, %H:%M')}}
+											</span>
+											<br>
+											<span style='display: none; ' class='id_in_db_LW'>
+												{{co.id}}
+											</span>
+											<input type="button" value='Редактировать коментарий'  onclick='edit_lw(this)' class='editComLW' >
+											<button type="button" onclick='del_lw(this)' class='buttonDeleteLW'  >Удалить коментарий</button>
+											<br>
+											<textarea name="" id="" cols="20" rows="5" style="display: none" class='textAreaLW'  ></textarea>
+																		
+											<br>
+										</span>
+									{%endfor%}
+									<form action="" method="POST">
+												<input type="text" placeholder="Введите коментарий второго уровня" class='inputLW'>
+												<button type="submit" onclick='add_comment_LW2(this)' class='comment_LW' >коментировать</button>
+											</form>	
+								</span>
+									
+							</div>
+							
+							{%endfor%}
+						<br><br>
+						<form action="" method="POST">
+							<input type="text" placeholder="Введите коментарий" class='InputComment' name='InputComment0'>
+							<button type="submit" onclick='add_comment(this)' class='addcommentButton'>коментировать</button>
+						</form>
+					<br><br>
+				</div>
 			</div>
 		{% endfor %}
 	</article>
