@@ -223,9 +223,7 @@ def test222(Post):
 # Проверка пользователя в базе данных и установка его постов
 @app.route("/login", methods=['POST'])
 def login():
-	print ('\n\n\n')
 	print (request.form)
-	print ('\n\n\n')
 	if len(request.form)>0:
 		name = request.form['name']
 		id = request.form['id']

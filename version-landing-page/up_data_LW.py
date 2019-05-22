@@ -11,7 +11,6 @@ def get2(post='', id=''):
 		first=Comment.query.filter(Comment.text==Comment).first()
 	else:
 		return False
-	print (first.Second_comments)
 	test1=[]
 	for i in first.Second_comments:
 		test1.append(i.date)
@@ -50,18 +49,14 @@ def ups2(post='', id=''):
 	# сортирует теги
 	if len(str(id))>=1:
 		id=str(id)
-		print ( 'User use ID, id = {}'.format(id) )
 		up = get2(id=id)
 		delete2(id=id)
 		update2(up,id=id)
-		print ('ALL DONE')
 	elif len(str(post))>=1:
 		post=str(post)
-		print ( 'User use find to text, post = {}'.format(post) )
 		up = get2(post=post)
 		delete2(post=post)
 		update2(up,post=post)
-		print ('ALL DONE')
 	else:
 		print ('Error!')
 		return False

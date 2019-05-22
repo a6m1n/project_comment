@@ -410,7 +410,7 @@ function edit_post_comment(element){
 		}; 		
 	};
 	var element_textarea = document.getElementById('text'+arr[0]+'AreaEditLL'+arr[1]);
-	console.log(element_textarea)
+	console.log(element_textarea, arr)
 	if (element_textarea.style.display=='none'){
 		element.value = 'Отправить';
 		element_textarea.value = document.getElementById('text'+arr[0]+'Comments'+arr[1]).innerHTML.replace(/\s/g, '');

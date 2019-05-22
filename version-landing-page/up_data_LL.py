@@ -11,7 +11,6 @@ def get(post='', id=''):
 		first=Post.query.filter(Post.text==post).first()
 	else:
 		return False
-	print (first.comments)
 	test1=[]
 	for i in first.comments:
 		test1.append(i.date)

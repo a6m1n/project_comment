@@ -1,8 +1,13 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	font-family: monospace;
+}
+body {
+	background-color: #929475;
 }
 header {
+	border: 4px double black;
 	margin: 10px 5% 10px;
 	height: 100px;
 	width: 90%;
@@ -25,29 +30,36 @@ header {
     right: 10px;
 }
 #if_true div a{
+	color: #fd0505;
+    border: groove 3px #888a83;
+    padding: 5px;
+    border-radius: 4px;
 	text-decoration: none;
 }
 #name_user, #if_true p {
 	padding-top: 20px;
-	/*background-color: #fff;*/
-	/*display: inline;*/
+	color: #b79f4b;
 	font-size: 1.2em;
 }
 .create_new_post {
+	border: 4px double black;
 	margin: 40px 10% 0;
 	min-height: 400px;
 	width: 80%;
 	background-color: rgba(0, 30, 84, .296875);
 }
 .label_field_cnp {
+	border: 4px double black;
 	top: 10px;
 	left: 30px;
 	width: 60%;
 	position: relative;
+	color: #b79f4b;
 	background-color: rgba(0, 30, 84, .296875);;
 	font-size: 1.7em;
 }
 .form_for_new_p {
+
 	position: relative;
 	top: 40px;
 }
@@ -57,10 +69,64 @@ header {
 	resize: none;
 	height: 200px;
 	left: 30px;
-	position: relative
+	position: relative;
+	border: 4px double black;
+    padding: 10px;
 }
 .button_post {
 	position: relative;
 	margin-left: 40px;
 }
+article {
+	/*border: 4px double black;*/
+	margin: 40px 10% 0;
+	min-height: 600px;
+	background-color: #b3bccc;
+	width: 80%;
 }
+.name_posts {
+	border: 4px double black;
+    border-style: outset none outset outset;
+    border-color: #FFEB3B;
+	color: #b79f3a;
+	background-color: #929475;
+	margin-left: 20px;
+	font-size: 2rem;
+	position: relative;
+	top: 20px;
+}
+.startBlock {
+	border: 4px double black;
+	background-color: #ebebe4;
+	min-height: 300px;
+	width: 80%;
+	margin-top: 100px;
+	position: relative;
+	left: 5%;
+}
+.hideForm {
+	padding-left: 10px;
+}
+.blockAllLW {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+.levelLW{
+	padding: 10px;
+}
+
+/*#757575  -- color text post*/
+/*#ebebe4 -- bgc for post*/
+
+
+/*font-family: monospace;
+border-color: rgb(169, 169, 169);*/
+
+/*background-color: rgb(235, 235, 228);*/
+/*color: rgb(84, 84, 84);*/
+/*    font-family: monospace;
+*/
+/*#fd0505 - for button exit*/
+
+/*background-color: #b79f4b; - кнопки
+    color: rgb(125, 115, 26);*/
