@@ -1,4 +1,4 @@
-#!c:\users\artem\desktop\test_bd_form\testformanddb\scripts\python.exe
+#!d:\artem\blog_update\scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'alembic==1.0.10','console_scripts','alembic'
 __requires__ = 'alembic==1.0.10'
 import re

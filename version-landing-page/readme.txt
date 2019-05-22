@@ -1,8 +1,7 @@
 ----- Зависимости----- 
 pip install flask
-pip install falsk-sqlalchemy
 pip install psycopg2
-pip install flask-migrate
+pip install flask-migrate---- устанавливает фласк скьюл алхим 
 pip install flask-script
 pip install wtforms
 ----- ----- ----- ----- 

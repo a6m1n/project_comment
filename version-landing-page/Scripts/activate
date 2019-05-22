@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Artem\Desktop\test_bd_form\testformAndDb"
+VIRTUAL_ENV="D:\artem\blog_update"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,8 +54,8 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    if [ "x(testformAndDb) " != x ] ; then
-	PS1="(testformAndDb) ${PS1:-}"
+    if [ "x(blog_update) " != x ] ; then
+	PS1="(blog_update) ${PS1:-}"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories

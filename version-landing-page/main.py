@@ -8,8 +8,7 @@ from flask_script import Manager
 
 from forms import  PostForm
 from config import Configuration
-from up_data_LL import *
-from up_data_LW import *
+from sorted import *
 
 # екземпляр класса фласк и база данных
 app = Flask(__name__)

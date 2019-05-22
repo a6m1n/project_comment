@@ -350,7 +350,6 @@ function add_comment(element){
 			data : {
 				post_id : post_id,
 				input_field : input_field				
-
 			},
 			type : 'POST',
 			url : '/add_comment2'
@@ -488,8 +487,6 @@ function add_comment_LW2(elem){
 			};
 		}; 		
 	};
-	// var show_LW = document.getElementById('level'+arr[0]+'LW'+arr[1]);
-	// console.log(elem.id, arr);
 	var post_id = document.getElementById('id'+arr[0]+'LLComment'+arr[1]).innerHTML.replace(/\s/g, '');
 	var input_field =  document.getElementById('input'+arr[0]+'LW'+arr[1]).value;
 	console.log(post_id, input_field);
@@ -497,7 +494,6 @@ function add_comment_LW2(elem){
 			data : {
 				post_id : post_id,
 				input_field : input_field				
-
 			},
 			type : 'POST',
 			url : '/add_comment3'
@@ -506,7 +502,6 @@ function add_comment_LW2(elem){
 
 
 function del_lw(element){
-	// console.log(elem);
 	var num=''; 
 	var arr = [];
 	var index3;

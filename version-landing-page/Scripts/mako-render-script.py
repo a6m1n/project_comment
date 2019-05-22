@@ -1,4 +1,4 @@
-#!c:\users\artem\desktop\test_bd_form\testformanddb\scripts\python.exe
+#!d:\artem\blog_update\scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'Mako==1.0.10','console_scripts','mako-render'
 __requires__ = 'Mako==1.0.10'
 import re
